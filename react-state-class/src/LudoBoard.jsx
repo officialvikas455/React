@@ -7,26 +7,25 @@ export default function LudoBoard(){
         yellow: 0,
         green: 0
     });
+    let [arr, setArr] = useState(["no moves"]);
 
     let updateBlue = () => {
-        console.log(`moves.blue= ${moves.blue}`);
-        setMoves({...moves, blue : moves.blue + 1});
+        setMoves( (prevMoves)=> {
+           return {...prevMoves, blue : prevMoves.blue + 1}
+      });
+      arr.push("blue moves");
+      setArr(arr);
+      console.log(arr);
+};
 
-    }
     let updateYellow = () => {
-        console.log(`moves.blue= ${moves.yellow}`);
         setMoves({...moves, yellow : moves.yellow + 1});
-
     }
     let updateGreen = () => {
-        console.log(`moves.blue= ${moves.green}`);
         setMoves({...moves, green : moves.green + 1});
-
     }
     let updateRed = () => {
-        console.log(`moves.red= ${moves.red}`);
         setMoves({...moves, red : moves.red + 1});
-
     }
 
     return (
