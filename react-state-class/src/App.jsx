@@ -1,16 +1,11 @@
-
-import Counter from './counter'
-import LikeButton from './LikeButton'
-import LudoBoard from './LudoBoard'
-import TodoList from './TodoList'
-import LotteryGame from './LotteryGame'
+import Joker from "./joker";
 
 function App() {
   return (
     <>
-     <TodoList/>
+      <Joker/>
     </>
   )
 }
 
-export default App
+export default App;
